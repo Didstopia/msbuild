@@ -1,0 +1,5 @@
+docker_*.sh
+.git*
+.DS_Store
+Thumbs.db
+node_modules/
