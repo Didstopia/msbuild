@@ -31,7 +31,6 @@ RUN apt-get install -y \
 
 # Create a symbolic link for msbuild.exe and msbuild
 RUN ln -s /usr/bin/xbuild /usr/bin/msbuild.exe
-RUN ln -s /usr/bin/msbuild.exe /usr/bin/msbuild
 
 # Cleanup
 ENV DEBIAN_FRONTEND newt
