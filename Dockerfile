@@ -29,8 +29,9 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E03280
 RUN echo "deb http://download.mono-project.com/repo/debian wheezy main" | tee /etc/apt/sources.list.d/mono-xamarin.list
 RUN apt-get update && apt-get install -y mono-complete
 
-# Create a symbolic link for msbuild.exe
+# Create a symbolic link for msbuild.exe and msbuild
 RUN ln -s /usr/bin/xbuild /usr/bin/msbuild.exe
+RUN ln -s /usr/bin/xbuild /usr/bin/msbuild
 
 # Cleanup
 ENV DEBIAN_FRONTEND newt
